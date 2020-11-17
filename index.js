@@ -44,15 +44,10 @@
 // console.log(result);
 
 
-$('#no').mouseover(function (e) {
-    if ( $('.answer').hasClass("row-reverse") ){
-        return $('.answer').removeClass("row-reverse");
-        
-    } else{
-        return $('.answer').addClass("row-reverse");
-    }
+$('#no').mouseover(function () {
+    $('.answer').toggleClass('row-reverse')
 })
 
-$('#yes').click(function (e) {
+$('#yes').click(function () {
     alert('yayyyy!');
 })
