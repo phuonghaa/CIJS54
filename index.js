@@ -45,7 +45,7 @@
 
 
 $('#no').mouseover(function () {
-    $('.answer').toggleClass('row-reverse')
+    $('.answer').toggleClass('row-reverse');
 })
 
 $('#yes').click(function () {
