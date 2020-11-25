@@ -10,6 +10,7 @@ class Student {
         this.age = age;
         this.hometown = hometown;
         this.courseList = [];
+        this.schoolName = "";
     }
 
     getInfo(){
@@ -106,7 +107,8 @@ STA101.addStudent(funky)
 CSI102.addStudent(funky)
 
 funky.getInfo()
-
+console.log(thangLong);
+console.log(STA101);
 
 console.log(findByAge(thangLong.studentList, 15));
 console.log(findByHometown(findByAge(thangLong.studentList,18),'Ha Noi'));
