@@ -1,5 +1,5 @@
-//import {Student} from './student.js'
-//import {Course} from './course.js'
+import Student from './student.js'
+import Course from './course.js'
 
 export default class School {
     schoolName;
@@ -23,9 +23,13 @@ export default class School {
     }
 
     addCourse(courseName){
-        this.courseList.push(courseName)
-        courseName.schoolName = this.schoolName;
+        if (courseName instanceof Course){
+            this.courseList.push(courseName)
+            courseName.schoolName = this.schoolName;
+        } else {
+            alert('Nhap linh tinh')
+        }
+        
     }
-
 
 }

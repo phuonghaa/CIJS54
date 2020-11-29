@@ -1,6 +1,4 @@
-//import {Student} from './student.js'
-
-
+import Student from './student.js'
 
 export default class Course {
     courseName;
