@@ -49,4 +49,6 @@ console.log(findByName(STA101.studentList, 'Cici'));
 
 console.log(thangLong.toHTML());
 
+
+
 document.querySelector("#container").innerHTML= thangLong.toHTML()
