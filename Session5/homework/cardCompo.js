@@ -47,28 +47,8 @@ const style =`
             </div>
         </div>
         `
-    }
-    
-    //duoc goi khi compponent duoc show ra man hinh
-    connectedCallback(){
-        console.log(this.name);
-    }
-
-    //duoc goi khi component bi xoa di
-    disconnectedCallback(){
-        console.log();
-    }
-
-    //lang nghe thay doi nhung attribute nao
-    static get observedAttributes(){
-        return ('name')
-    }
-
-    //duoc goi khi co bat ki su thay doi attribute nao
-    // attributeChangedCallback(name, oldVal, mewVal){
-    //     console.log('change');
-    // }
-}
+    }  
+ }
 
 
 window.customElements.define('student-card', StudentCard)
