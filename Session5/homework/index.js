@@ -1,18 +1,13 @@
-import Student from './student.js'
 import School from './school.js'
 import './cardCompo.js'
-import { addDataToList } from "./utils.js"
-
-
+import { getStudentList } from "./utils.js"
 
 
 const thangLong = new School('Thang Long')
 
-addDataToList('users', thangLong.studentList)
+getStudentList().then(list => {
+    thangLong.studentList = list
+    document.querySelector("#container").innerHTML= thangLong.toHTML()
+})
 
-console.log(thangLong);
-console.log(thangLong.studentList);
-//console.log(thangLong.toHTML());
-
-//document.querySelector("#container").innerHTML= thangLong.toHTML()
 

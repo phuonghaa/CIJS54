@@ -19,12 +19,10 @@ export default class School {
         
     }
 
-
     toHTML(){
         let html = '';
         for (const student of this.studentList) {
-            console.log(student);
-            html += `<student-card name='${student.name}' age='${student.age}' hometown='${student.address}'> </student-card>`
+            html += `<student-card name='${student.name}' age='${student.age}' hometown='${student.hometown}'> </student-card>`
         }
         return html;
     }
