@@ -1,4 +1,4 @@
-import {addUser, getDataFromDocs} from '../utils.js'
+import {getDataFromDocs, saveToLocalStorage, getItemLocalStorage} from '../utils.js'
 
 const style = `
 .login-container{
@@ -99,7 +99,11 @@ class LoginScreen extends HTMLElement {
                     .setAttribute('error', 'Incorrect email')
                 }
                 else if (CryptoJS.MD5(password).toString() === user[0].password){
-                    alert('login sucess')
+                    // console.log(user);
+        
+                    saveToLocalStorage('currentUser',user[0])
+
+                    redirect('story')
                 }else{
                     this._shadowRoot.getElementById('password')
                     .setAttribute('error', 'Incorrect password')

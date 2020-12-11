@@ -1,4 +1,4 @@
-import {addUser, getDataFromDocs} from '../utils.js'
+import {getDataFromDocs} from '../utils.js'
 
 
 //var CryptoJS = require("crypto-js");
