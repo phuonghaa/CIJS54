@@ -28,7 +28,7 @@ export function redirect(screenName) {
 
 async function checkAuthen(){
     const user = getItemLocalStorage('currentUser')
-    if (user !== []){
+    if (user !== null){
         const res = await firebase.firestore().collection('users')
         .where('email','==', user.email)
         .where('password','==',user.password)

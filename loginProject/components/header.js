@@ -79,7 +79,9 @@ class StoryHeader extends HTMLElement{
         this._shadowDom.getElementById('logout-btn')
         .addEventListener('click', () => {
             //delete current user (JSON local storage)
+            window.localStorage.removeItem('currentUser');
             redirect('login')
+
         })
     }
 

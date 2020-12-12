@@ -1,3 +1,7 @@
+const style = `
+
+`
+
 class StoryScreen extends HTMLElement{
     constructor(){
         super()
@@ -6,6 +10,10 @@ class StoryScreen extends HTMLElement{
 
     connectedCallback(){
         this._shadowDom.innerHTML= `
+        <style>
+            ${style}
+        </style>
+        
         <story-header></story-header>
         <create-post></create-post>
         
